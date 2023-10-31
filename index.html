@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oturbin!</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            padding: 12px;
+            background: white;
+            color: #333333;
+            width: 450px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        button {
+            padding: 12px 14px 12px 14px;
+            margin-top: 10px;
+            cursor: pointer;
+            color: white;
+            border-radius: 10px;
+            background: #772fa3;
+            border: none;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: #ad5bde;
+        }
+
+        input {
+            border: 1px none #333333;
+            border-bottom-style: solid;
+            font-size: 14px;
+            margin-bottom: 8px;
+            width: 100%;
+            background: white;
+            color: #772fa3;
+            padding: 8px 0 8px 0;
+        }
+
+        input:focus {
+            border: 2px none #772fa3;
+            border-bottom-style: solid;
+            outline: none;
+        }
+
+        label {
+            align-self: baseline;
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 42px;
+            color: #772fa3;
+        }
+
+        .address {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .address-input {
+            padding: 8px;
+            margin: 8px;
+            flex-direction: column;
+            display: flex;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            width: 93%;
+        }
+
+        #o {
+            color:#772fa3;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        #history {
+            width: 100%;
+            max-height: 100px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .history-item {
+            width: 90%;
+            background: ghostwhite;
+            padding: 4px 12px 4px 12px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .delete-item {
+            color: red;
+            background: #ffdedec2;
+            text-align: center;
+            padding: 8px 12px 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: fit-content;
+        }
+
+        .item-link {
+            color: #9c73a3;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h2><b id="o">O</b>turbin!</h2>
+    <p>Trouvez un job dès maintenant avec une requête google optimisée</p>
+    <div class="main">
+        <div class="title">
+            <label>Intitulé du poste ou description</label>
+            <input id="job-title" placeholder="Boucher, formateur, animaux, cuisine ..." type="text">
+        </div>
+        <div class="address">
+            <div class="address-input">
+                <label>Pays</label>
+                <input id="job-country" placeholder="France, Belgique ..." type="text">
+            </div>
+            <div class="address-input">
+                <label>Ville</label>
+                <input id="job-city" placeholder="Lille, Paris ..." type="text">
+            </div>
+            <div class="address-input">
+                <label>Code postal</label>
+                <input id="job-postal" placeholder="62400, 93000 ..." type="text">
+            </div>
+        </div>
+        <button id="search">Lancer la recherche</button>
+        <div id="history">
+        </div>
+    </div>
+    <script src="extension.js"></script>
+</body>
+</html>

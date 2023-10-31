@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Oturbin!",
+  "version": "1.0.0",
+  "description": "Trouvez un job à l'aide de requêtes optimisées et historisez vos recherches",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
